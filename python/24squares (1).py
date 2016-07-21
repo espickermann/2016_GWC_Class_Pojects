@@ -1,0 +1,35 @@
+from turtle import *
+
+for i in range(24):
+	def Color(color):
+		pencolor(color)
+		for i in range(4):
+			forward(180)
+			right(90)
+		right(15)
+Color("violet red")
+Color("aquamarine")
+Color("tomato")
+Color("blue violet")
+Color("chartreuse")
+Color("cornflower blue")
+Color("dark magenta")
+Color("dark orchid")
+Color("dark slate blue")
+Color("DarkGoldenrod2")
+Color("DarkSeaGreen1")
+Color("DeepPink4")
+Color("firebrick4")
+Color("ForestGreen")
+Color("gold")
+Color("spring green")
+Color("tan4")
+Color("hot pink")
+Color("indian red")
+Color("LavenderBlush")
+Color("SteelBlue4")
+Color("OliveDrab3")
+Color("orange1")
+Color("plum")
+
+done()
