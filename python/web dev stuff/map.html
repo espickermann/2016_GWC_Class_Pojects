@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        width: 100%;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+	  
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+            center: {lat: 37.485765, lng: -122.235963},
+            zoom: 15});
+		var home = '<div id="content">'+
+			  '<div id="siteNotice">'+
+			  '</div>'+
+			  '<h1 id="firstHeading" class="firstHeading">HOME</h1>'+
+			  '<div id="bodyContent">'+
+			  '<p>' +
+			  'the place for sleep eating and homework</p>'+
+			
+			  '</div>'+
+			  '</div>';
+		var WOHSEN = '<div id="content">'+
+			  '<div id="siteNotice">'+
+			  '</div>'+
+			  '<h1 id="firstHeading" class="firstHeading">WOHSEN</h1>'+
+			  '<div id="bodyContent">'+
+			  '<p>' +
+			  'a place for sleep and eating with family</p>'+
+			
+			  '</div>'+
+			  '</div>';
+		var TEXAS = '<div id="content">'+
+			  '<div id="siteNotice">'+
+			  '</div>'+
+			  '<h1 id="firstHeading" class="firstHeading">TEXAS</h1>'+
+			  '<div id="bodyContent">'+
+			  '<p>' +
+			  'cousins house :P</p>'+
+			
+			  '</div>'+
+			  '</div>';
+		var SCHOOL = '<div id="content">'+
+			  '<div id="siteNotice">'+
+			  '</div>'+
+			  '<h1 id="firstHeading" class="firstHeading">SCHOOL</h1>'+
+			  '<div id="bodyContent">'+
+			  '<p>' +
+			  'both fun and frustration and sleep depravation! :P</p>'+
+			
+			  '</div>'+
+			  '</div>';
+
+
+		  var infowindow = new google.maps.InfoWindow({
+			content: SCHOOL
+		  });
+		  var infowindow2 = new google.maps.InfoWindow({
+			content: home
+		  });
+		  var infowindow3 = new google.maps.InfoWindow({
+			content: WOHSEN
+		  });
+		  var infowindow4 = new google.maps.InfoWindow({
+			content: TEXAS
+		  });
+
+		var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';	
+			
+	    var marke = new google.maps.Marker({
+		position: {lat: 37.457139, lng: -122.250252},
+		title: 'Hello World!',
+		icon: iconBase + 'dining.png'
+		});
+		
+		var marker = new google.maps.Marker({
+		position: {lat: 37.485765, lng: -122.235965},
+		title:"Hello World!",
+		icon: iconBase + 'schools.png'
+		});
+
+
+		
+		var mark = new google.maps.Marker({
+		position: {lat: 54.148839, lng: 12.658914},
+		title:"Hello World!",
+		icon: iconBase + 'dining.png'
+		});
+		
+
+		
+		
+		
+		var mar = new google.maps.Marker({
+		position: {lat: 31.845290, lng: -102.367451},
+		title:"Hello World!",
+		icon: iconBase + 'lodging.png'
+		});
+
+		// To add the marker to the map, call setMap();
+		marker.setMap(map);
+		marke.setMap(map);
+		mark.setMap(map);
+		mar.setMap(map);
+		
+		map.setMapTypeId('hybrid');
+		marker.addListener('click', function() {
+		infowindow.open(map, marker);
+		});
+		marke.addListener('click', function() {
+		infowindow2.open(map, marke);
+		});
+		mark.addListener('click', function() {
+		infowindow3.open(map, mark);
+		});
+		mar.addListener('click', function() {
+		infowindow4.open(map, mar);
+		});
+		}
+		
+
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?&callback=initMap">
+    </script>
+  </body>
+</html>

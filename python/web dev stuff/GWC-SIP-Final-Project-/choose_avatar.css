@@ -1,0 +1,23 @@
+h1{
+	color: black;
+	text-align: center;
+	font-size: 100px;
+	font-family: "Hobo Std Medium", Arial, sans;
+		
+}
+
+#image{
+	text-align: center;
+}
+.img{
+	display: inline-block;
+	
+}
+#parent{
+	text-align: center;
+}
+body{
+	background-image: url("basic_bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}

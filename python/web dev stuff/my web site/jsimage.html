@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Example</title>
+
+    <script>
+
+      function myFunction() {
+		var picture = document.getElementById("welcome"); 
+		if (picture.src.match("demoncat")){
+		picture.src = "cat.jpg";
+
+		}
+		else {
+		var picture = document.getElementById("welcome");
+		picture.src = "demoncat.jpg";}
+
+      }
+    </script>
+  </head>
+  <body>
+	<style>
+		body {
+		background-color: lightblue;
+		}
+	</style>
+    <img id="welcome" src= "cat.jpg" alt="this should be an image sucks for you that you cant see it"> </img>
+    <button id="btn" onclick="myFunction()" onclick= >Click me!</button>
+  </body>
+</html>
